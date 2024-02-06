@@ -1,3 +1,19 @@
+// Function to create white flash effect
+function createWhiteFlash() {
+    const flashDiv = document.createElement('div');
+    flashDiv.style.position = 'fixed';
+    flashDiv.style.top = '0';
+    flashDiv.style.left = '0';
+    flashDiv.style.width = '100%';
+    flashDiv.style.height = '100%';
+    flashDiv.style.backgroundColor = 'white';
+    document.body.appendChild(flashDiv);
+
+    gsap.to(flashDiv, { opacity: 0, duration: 0.2, onComplete: () => {
+        flashDiv.remove();
+    }});
+}
+
 // Pinning the right div to the background in the center of the screen
 ScrollTrigger.create({
     trigger: ".gallery",
@@ -17,6 +33,7 @@ gsap.utils.toArray('.details').forEach((details, index) => {
             end: "bottom 30%", // Adjust this value as needed
             toggleActions: "play none none none",
             onEnter: () => {
+                createWhiteFlash(); // Trigger white flash effect
                 // Hide all photo divs initially
                 document.querySelectorAll('.right > div').forEach(div => {
                     div.style.display = 'none';
@@ -27,6 +44,7 @@ gsap.utils.toArray('.details').forEach((details, index) => {
             onLeaveBack: () => {
                 // Show the previous photo div when scrolling upwards
                 if (index > 0) {
+                    createWhiteFlash(); // Trigger white flash effect
                     document.querySelectorAll('.right > div').forEach(div => {
                         div.style.display = 'none';
                     });
