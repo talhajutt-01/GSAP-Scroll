@@ -60,10 +60,24 @@
     z-index: -1; /* Send to the back */
 }
 
-.photos {
+.photos1 {
     width: 100%;
     height: 100%;
     background: url("https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg");
+	background-repeat: no-repeat; 
+	background-size: cover;
+}
+.photos2 {
+    width: 100%;
+    height: 100%;
+    background: url("https://media.istockphoto.com/id/1448124439/vector/web-development-programming-and-code-testing-ui-concept-with-laptop-displaying-futuristic.jpg?s=612x612&w=0&k=20&c=CXBA4DexowbvWEsyIBbiwc37h15N7fyeSpXUXGQpCpU=");
+	background-repeat: no-repeat; 
+	background-size: cover;
+}
+.photos3 {
+    width: 100%;
+    height: 100%;
+    background: url("https://img.freepik.com/premium-vector/software-development-web-coding-laptop-programming-concept-website-design-coding-remote-work-home_3482-5615.jpg");
 	background-repeat: no-repeat; 
 	background-size: cover;
 }
